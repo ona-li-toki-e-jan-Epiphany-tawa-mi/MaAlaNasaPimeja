@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 // TODO monsuta walo pi ilo utala pi palisa kon li kama pimeja lon ma ala.
 // TODO sinpin suli suli pi kiwen pimeja li lon.
 // TODO lupa suli tawa ma ala nasa pimeja li lon ma jan.
+// TODO monsuta pi oko kalama. ona li lukin kepeken kalama.
 
 @Mod("mlnspmj")
 public class MaAlaNasaPimeja {
