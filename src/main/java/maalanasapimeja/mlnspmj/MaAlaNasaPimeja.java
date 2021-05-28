@@ -18,18 +18,22 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+// TODO ma ala. ona li jo e ijo lili kin.
+
 // TODO jan li lape lon supa lape la ona li moli.
 // TODO jan li kepeken e leko lape pi ma seli la ala li kama.
+
 // TODO nanpa CoordinateScale pi ma ala nasa pimeja li wile ante lon tenpo.
-// TODO monsuta jasima. ona li pali e ijo. mi sona ala e ona.
-// TODO monsuta walo pi ilo utala pi palisa kon li kama pimeja lon ma ala.
 // TODO sinpin suli suli pi kiwen pimeja li lon.
 // TODO lupa suli tawa ma ala nasa pimeja li lon ma jan.
+
 // TODO monsuta pi oko kalama. ona li lukin kepeken kalama.
+// TODO monsuta jasima. ona li pali e ijo. mi sona ala e ona.
+// TODO monsuta walo pi ilo utala pi palisa kon li kama pimeja lon ma ala.
 
 @Mod("mlnspmj")
 public class MaAlaNasaPimeja {
-    private static final Logger iloToki = LogManager.getLogger();
+    public static final Logger iloToki = LogManager.getLogger();
 
     public MaAlaNasaPimeja() {
         // Register the setup method for modloading
@@ -40,6 +44,8 @@ public class MaAlaNasaPimeja {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        MinecraftForge.EVENT_BUS.register(IloLawaPiNasinAla.class);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
